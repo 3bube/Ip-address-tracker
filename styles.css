@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --clr-100: hsl(0, 0%, 17%);
+  --clr-200: hsl(0, 0%, 59%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  font-family: "Rubik", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.ip-search {
+  height: 230px;
+  background-image: url(images/pattern-bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  gap: 10px;
+  padding-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.ip-search h4 {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  max-width: 400px;
+}
+
+form #searchbar {
+  border: none;
+  outline: none;
+  padding: 16px;
+  width: 60%;
+  border-radius: 10px 0 0 10px;
+  font-family: "Rubik", sans-serif;
+}
+
+form button {
+  background-color: black;
+  padding: 16px 15px;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.ip-info {
+  background-color: white;
+  position: absolute;
+  top: 25%;
+  padding: 30px 40px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.ip-info h6 {
+  font-size: 12px;
+  color: var(--clr-200);
+  letter-spacing: 1px;
+}
+
+.ip-info span {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+#map {
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
+
+hr {
+  display: none;
+}
+
+@media (min-width: 760px) {
+  .ip-info {
+    flex-direction: row;
+    text-align: start;
+    padding: 70px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  hr {
+    display: block;
+  }
+
+  form {
+    max-width: 1300px;
+    flex: 4;
+  }
+}
